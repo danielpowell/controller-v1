@@ -1,4 +1,4 @@
-#N canvas 0 23 1440 851 10;
+#N canvas 572 400 237 175 10;
 #X obj -383 134 dac~;
 #X obj -396 -30 pack 0 50;
 #X obj -394 25 line~;
@@ -35,6 +35,13 @@
 #X obj -297 -196 * 2;
 #X obj -196 -137 * 8;
 #X obj 12 -16 * 7;
+#X obj -215 313 dac~;
+#X obj -240 162 pack 0 50;
+#X obj -227 218 line~;
+#X obj -193 280 *~;
+#X obj -212 251 receive~ livein;
+#X floatatom -460 -106 5 0 0 0 - - -;
+#X obj -449 -71 / 10;
 #X connect 1 0 2 0;
 #X connect 2 0 3 1;
 #X connect 3 0 0 1;
@@ -67,3 +74,10 @@
 #X connect 33 0 20 0;
 #X connect 34 0 23 0;
 #X connect 35 0 31 0;
+#X connect 37 0 38 0;
+#X connect 38 0 39 1;
+#X connect 39 0 36 0;
+#X connect 39 0 36 1;
+#X connect 40 0 39 0;
+#X connect 41 0 42 0;
+#X connect 42 0 37 0;
