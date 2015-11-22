@@ -1,50 +1,90 @@
-#N canvas 582 395 341 230 10;
-#X obj 91 95 sample-looper~;
-#X msg 242 291 \; pd dsp 1;
-#X msg 7 40 rec start;
-#X msg 23 70 rec stop;
-#X msg 75 39 play start;
-#X msg 88 67 play stop;
-#X text 239 269 turn on sound computation;
-#X msg 161 28 1;
-#X msg 163 49 10;
-#X msg 163 75 0.1;
-#X msg 285 134 bang;
-#X obj 245 170 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#N canvas 210 120 775 754 10;
+#X obj 123 497 sample-looper~;
+#X msg 272 671 \; pd dsp 1;
+#X msg 37 420 rec start;
+#X msg 53 450 rec stop;
+#X msg 105 419 play start;
+#X msg 118 447 play stop;
+#X text 269 649 turn on sound computation;
+#X msg 191 408 1;
+#X msg 193 429 10;
+#X msg 193 455 0.1;
+#X msg 315 514 bang;
+#X obj 275 550 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X text 163 187 outputs a bang at loop end;
-#X obj 106 169 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 12700 1;
-#X obj 97 248 / 127;
-#X obj 162 284 pack 0 50;
-#X obj 114 285 line~;
-#X obj 81 286 *~;
-#X floatatom 201 25 5 0 0 0 - - -;
+#X text 193 567 outputs a bang at loop end;
+#X obj 114 212 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -204786
+-1 -1 0 1;
+#X obj 127 628 / 127;
+#X obj 192 664 pack 0 50;
+#X obj 144 665 line~;
+#X obj 111 666 *~;
+#X floatatom 231 405 5 0 0 0 - - -;
 #X obj 802 121 random 5;
 #X obj 510 64 * 0.1;
 #X obj 802 94 metro 100;
 #X obj 515 93 spigot;
 #X obj 793 65 random 1000;
-#X msg 203 74 0;
-#X msg 204 50 1;
-#X floatatom 245 25 5 0 0 0 - - -;
+#X msg 233 454 0;
+#X msg 234 430 1;
+#X floatatom 275 405 5 0 0 0 - - -;
 #X obj 907 113 random 5;
 #X obj 908 86 metro 100;
 #X obj 509 37 spigot;
-#X msg 248 71 0;
-#X msg 246 51 1;
+#X msg 278 451 0;
+#X msg 276 431 1;
 #X obj 885 62 random 100;
-#X msg 12 18 start;
+#X msg 42 398 start;
 #X msg 589 104 stop;
 #X obj 535 98 *~ 0.7;
 #X obj 577 126 readsf~ 2;
 #X obj 648 153 *~ 0.7;
 #X msg 577 81 open musicboxmbira.wav;
-#X obj 78 315 send~ mbirasampv;
-#X text 276 156 restart playback;
+#X obj 108 695 send~ mbirasampv;
+#X text 306 536 restart playback;
 #X obj 588 38 loadbang;
-#X text 193 6 UP;
-#X text 233 6 DOWN;
+#X text 223 386 UP;
+#X text 263 386 DOWN;
+#X obj 111 189 bng 15 250 50 0 empty empty empty 17 7 0 10 -204800
+-1 -1;
+#X obj 110 170 bng 15 250 50 0 empty empty empty 17 7 0 10 -204800
+-1 -1;
+#X obj 110 149 bng 15 250 50 0 empty empty empty 17 7 0 10 -204800
+-1 -1;
+#X obj 211 151 bng 15 250 50 0 empty empty empty 17 7 0 10 -204800
+-1 -1;
+#X obj 212 172 bng 15 250 50 0 empty empty empty 17 7 0 10 -204800
+-1 -1;
+#X text 128 150 start sample;
+#X text 131 171 Record start;
+#X text 132 189 Record stop;
+#X text 232 150 play start;
+#X text 233 170 plqy stop;
+#X text 248 209 vol;
+#X obj 112 251 bng 15 250 50 0 empty empty empty 17 7 0 10 -203904
+-1 -1;
+#X obj 142 251 bng 15 250 50 0 empty empty empty 17 7 0 10 -203904
+-1 -1;
+#X obj 173 252 bng 15 250 50 0 empty empty empty 17 7 0 10 -203904
+-1 -1;
+#X obj 203 253 bng 15 250 50 0 empty empty empty 17 7 0 10 -203904
+-1 -1;
+#X obj 226 253 bng 15 250 50 0 empty empty empty 17 7 0 10 -203904
+-1 -1;
+#X obj 203 276 bng 15 250 50 0 empty empty empty 17 7 0 10 -203904
+-1 -1;
+#X obj 226 276 bng 15 250 50 0 empty empty empty 17 7 0 10 -203904
+-1 -1;
+#X text 248 251 on;
+#X text 249 272 off;
+#X text 112 228 1;
+#X text 139 230 10;
+#X text 168 229 0.1;
+#X text 201 229 up;
+#X text 222 228 down;
+#X obj 110 129 bng 15 250 50 0 empty empty empty 17 7 0 10 -204800
+-1 -1;
+#X text 133 128 load;
 #X connect 0 0 17 0;
 #X connect 0 1 11 0;
 #X connect 2 0 0 0;
@@ -86,3 +126,17 @@
 #X connect 41 0 21 0;
 #X connect 41 0 32 0;
 #X connect 41 0 28 0;
+#X connect 44 0 3 0;
+#X connect 45 0 2 0;
+#X connect 46 0 33 0;
+#X connect 47 0 4 0;
+#X connect 48 0 5 0;
+#X connect 55 0 7 0;
+#X connect 56 0 8 0;
+#X connect 57 0 9 0;
+#X connect 58 0 25 0;
+#X connect 59 0 31 0;
+#X connect 60 0 24 0;
+#X connect 61 0 30 0;
+#X connect 69 0 41 0;
+#X coords 0 -1 1 1 200 200 1 100 100;

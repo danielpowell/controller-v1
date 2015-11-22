@@ -1,0 +1,11 @@
+#N canvas 339 98 958 709 10;
+#X obj 28 493 skindrumone;
+#X obj 256 495 skindrumtwo;
+#X obj 474 495 musicboxmbira;
+#X obj 254 126 beatmangle;
+#X obj 696 494 live_input;
+#X obj 27 277 bowl;
+#X obj 26 65 drine;
+#X obj 693 275 live_input_2;
+#X obj 642 32 mixer;
+#X coords 0 709 1 708 85 60 0;
