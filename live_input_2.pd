@@ -1,4 +1,4 @@
-#N canvas 0 23 1440 851 10;
+#N canvas 41 23 1440 851 10;
 #X obj 103 -392 sample-looper~;
 #X msg 272 -200 \; pd dsp 1;
 #X msg 17 -456 rec start;
@@ -41,7 +41,7 @@
 #X text 305 -334 restart playback;
 #X text 210 -501 DOWN;
 #X text 248 -501 UP;
-#X obj 161 -512 adc~;
+#X obj 150 -510 adc~;
 #X text 102 -490 comment;
 #X obj 726 -248 random 25;
 #X obj 730 -286 metro 20;
@@ -82,7 +82,14 @@
 #X text 171 219 0.1;
 #X text 204 219 up;
 #X text 225 218 down;
-#X obj 50 -145 send~ livein2;
+#X obj 49 -143 send~ livein2;
+#X obj 313 151 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 442 -17 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 302 -76 pvu~;
+#X obj 117 304 hsl 128 15 0.1 10 1 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 114 323 5 0 0 0 - - -;
+#X text 255 302 pitch;
 #X connect 0 0 17 0;
 #X connect 0 1 11 0;
 #X connect 2 0 0 0;
@@ -122,6 +129,7 @@
 #X connect 36 0 23 0;
 #X connect 36 0 43 0;
 #X connect 40 0 0 1;
+#X connect 40 0 72 0;
 #X connect 42 0 18 0;
 #X connect 43 0 42 0;
 #X connect 44 0 3 0;
@@ -135,4 +143,7 @@
 #X connect 59 0 29 0;
 #X connect 60 0 22 0;
 #X connect 61 0 28 0;
-#X coords 0 -1 1 1 200 200 1 100 100;
+#X connect 72 0 70 0;
+#X connect 73 0 74 0;
+#X connect 74 0 0 2;
+#X coords 0 -1 1 1 280 250 1 100 100;

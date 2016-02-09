@@ -43,8 +43,8 @@
 #X obj 108 695 send~ mbirasampv;
 #X text 306 536 restart playback;
 #X obj 588 38 loadbang;
-#X text 223 386 UP;
-#X text 263 386 DOWN;
+#X text 236 385 UP;
+#X text 279 383 DOWN;
 #X obj 111 189 bng 15 250 50 0 empty empty empty 17 7 0 10 -204800
 -1 -1;
 #X obj 110 170 bng 15 250 50 0 empty empty empty 17 7 0 10 -204800
@@ -85,6 +85,10 @@
 #X obj 110 129 bng 15 250 50 0 empty empty empty 17 7 0 10 -204800
 -1 -1;
 #X text 133 128 load;
+#X obj 115 303 hsl 128 15 0.1 10 1 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 112 323 5 0 0 0 - - -;
+#X text 253 302 pitch;
 #X connect 0 0 17 0;
 #X connect 0 1 11 0;
 #X connect 2 0 0 0;
@@ -139,4 +143,6 @@
 #X connect 60 0 24 0;
 #X connect 61 0 30 0;
 #X connect 69 0 41 0;
-#X coords 0 -1 1 1 200 200 1 100 100;
+#X connect 71 0 72 0;
+#X connect 72 0 0 2;
+#X coords 0 -1 1 1 200 250 1 100 100;

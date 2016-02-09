@@ -87,6 +87,10 @@
 #X obj 110 131 bng 15 250 50 0 empty empty empty 17 7 0 10 -204800
 -1 -1;
 #X text 133 130 load;
+#X obj 112 302 hsl 128 15 0.1 10 1 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 109 321 5 0 0 0 - - -;
+#X text 250 300 pitch;
 #X connect 0 0 17 0;
 #X connect 0 1 11 0;
 #X connect 2 0 0 0;
@@ -142,4 +146,6 @@
 #X connect 62 0 24 0;
 #X connect 63 0 30 0;
 #X connect 71 0 41 0;
-#X coords 0 -1 1 1 200 200 1 100 100;
+#X connect 73 0 74 0;
+#X connect 74 0 0 2;
+#X coords 0 -1 1 1 200 250 1 100 100;

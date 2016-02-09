@@ -1,4 +1,4 @@
-#N canvas 126 152 749 657 10;
+#N canvas 682 283 749 657 10;
 #X obj -685 18 sample-looper~;
 #X msg -777 358 \; pd dsp 1;
 #X msg -773 -26 rec start;
@@ -88,6 +88,10 @@
 #X text 135 128 load;
 #X msg -219 -92 open drine.wav;
 #X obj -593 354 send~ drine;
+#X obj 119 303 hsl 128 15 0.1 10 1 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 116 322 5 0 0 0 - - -;
+#X text 257 301 pitch;
 #X connect 0 0 17 0;
 #X connect 0 1 11 0;
 #X connect 2 0 0 0;
@@ -142,4 +146,6 @@
 #X connect 62 0 30 0;
 #X connect 70 0 40 0;
 #X connect 72 0 38 0;
-#X coords 0 -1 1 1 200 200 1 100 100;
+#X connect 74 0 75 0;
+#X connect 75 0 0 2;
+#X coords 0 -1 1 1 200 250 1 100 100;
