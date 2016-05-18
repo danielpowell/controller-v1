@@ -1,0 +1,10 @@
+#N canvas 84 173 1309 536 10;
+#X obj 450 -224 live_input;
+#X obj 746 -225 live_input_2;
+#X obj 1039 -219 grain_delay3;
+#X obj 229 -248 plates_2;
+#X obj 18 -249 plates_1;
+#X obj 19 8 pots_1;
+#X obj 228 14 pots_2;
+#X obj 446 40 mixer_ceramics;
+#X coords 0 536 1 535 85 60 0;

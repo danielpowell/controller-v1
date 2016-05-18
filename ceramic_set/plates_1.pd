@@ -1,4 +1,4 @@
-#N canvas 159 94 749 657 10;
+#N canvas 0 23 1440 788 10;
 #X obj -685 18 sample-looper~;
 #X msg -777 358 \; pd dsp 1;
 #X msg -773 -26 rec start;
@@ -91,7 +91,7 @@
 -1 -1 0 1;
 #X floatatom 113 324 5 0 0 0 - - -;
 #X text 254 303 pitch;
-#X msg -219 -92 open bowl_newer_and_louder.wav;
+#X msg -219 -92 open plates_1.wav;
 #X connect 0 0 17 0;
 #X connect 0 1 11 0;
 #X connect 2 0 0 0;
@@ -102,8 +102,7 @@
 #X connect 8 0 0 2;
 #X connect 9 0 0 2;
 #X connect 10 0 0 3;
-#X connect 13 0 14 0;
-#X connect 14 0 15 0;
+#X connect 13 0 15 0;
 #X connect 15 0 16 0;
 #X connect 16 0 17 1;
 #X connect 17 0 72 0;
