@@ -1,0 +1,11 @@
+#N canvas 0 60 800 420 10;
+#X obj 179 -12 drine 11s;
+#X obj -48 251 skindrumone 11s;
+#X obj 179 251 skindrumtwo 23s;
+#X obj -48 506 musicboxmbira 13s;
+#X obj -51 -211 mixer;
+#X obj 411 -11 live_input;
+#X obj 411 249 live_input_2;
+#X obj -49 -13 bowl 29s;
+#X obj 186 516 grain_delay3;
+#X coords 0 420 1 419 85 60 0;

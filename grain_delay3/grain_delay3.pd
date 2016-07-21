@@ -1,4 +1,4 @@
-#N canvas 120 184 1028 628 10;
+#N canvas 89 62 473 413 10;
 #X msg 951 -41 location /home/mnb/samplelib;
 #X msg 985 9 location /home/mnb/wave_wrk;
 #X msg 971 -15 location /home/mnb/archiv/sounds;
@@ -38,7 +38,7 @@
 -1 -1 4900 1;
 #X obj 190 216 nbx 3 14 -36 36 0 1 empty empty tp -15 7 0 10 -262144
 -1 -1 36 256;
-#X floatatom 103 170 9 0 0 0 - - -;
+#X floatatom 103 170 9 0 0 0 - - -, f 9;
 #X obj 415 122 inlet~;
 #X obj 440 420 / 1000;
 #X obj 463 453 *;
@@ -194,7 +194,6 @@
 #X obj 367 219 openpanel;
 #X obj 318 157 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X text 658 459 if the playlist external is missing;
 #N canvas 567 269 891 641 lfo1rnd 0;
 #X obj -41 455 *;
 #X obj -45 -148 loadbang;
@@ -295,12 +294,12 @@
 #X coords 0 -1 1 1 140 50 1 100 100;
 #X restore 111 135 pd lfo1rnd;
 #X obj 34 66 * 0.5;
-#X obj 36 637 send~ graindelay3;
+#X obj 42 440 send~ graindelay3;
 #X obj 207 113 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -204786
 -1 -1 0 1;
-#X obj 46 538 pack 0 50;
-#X obj 50 568 line~;
-#X obj 31 606 *~;
+#X obj 52 341 pack 0 50;
+#X obj 56 371 line~;
+#X obj 37 409 *~;
 #X text 317 128 vol;
 #X text 248 205 0.1;
 #X text 281 205 up;
@@ -308,21 +307,22 @@
 #X text 291 156 open;
 #X obj 392 134 adc~;
 #X obj 369 174 *~ 4;
+#X text 403 376;
 #X connect 3 0 5 0;
-#X connect 5 0 20 0;
-#X connect 5 1 20 0;
+#X connect 5 0 19 0;
+#X connect 5 1 19 0;
 #X connect 8 0 7 0;
 #X connect 9 0 10 0;
 #X connect 9 1 8 0;
 #X connect 10 0 7 0;
 #X connect 11 0 9 0;
 #X connect 12 0 11 0;
-#X connect 14 0 15 0;
-#X connect 15 0 5 2;
+#X connect 13 0 14 0;
+#X connect 14 0 5 2;
+#X connect 16 0 17 0;
 #X connect 17 0 18 0;
-#X connect 18 0 19 0;
-#X connect 19 0 20 1;
-#X connect 20 0 16 0;
-#X connect 26 0 27 0;
-#X connect 27 0 5 4;
+#X connect 18 0 19 1;
+#X connect 19 0 15 0;
+#X connect 25 0 26 0;
+#X connect 26 0 5 4;
 #X coords 0 -1 1 1 250 230 1 100 100;
